@@ -1,66 +1,23 @@
-## Foundry
+# DBridge bridging example
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+In this POC we provide an example of bridging USDC from BASE to Arbitrum.
 
-Foundry consists of:
+We use the 
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+### Pre-requisites
 
-## Documentation
+- [bun](https://bun.sh/docs/installation)
+- ensure a minimum of $2 [USDC](https://basescan.org/address/0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA) in the BASE account wallet
 
-https://book.getfoundry.sh/
+### Steps
 
-## Usage
+1. `bun install`
+2. set `PRIVATE_KEY` var in [`.env`](.env) file
+3. `bun run index.ts`
 
-### Build
+## Example transaction
 
-```shell
-$ forge build
-```
+### Bridge USDC from BASE to Arbitrum
 
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Origin TX: https://basescan.org/tx/0xd5b82b971bfd5240f5521e80708cccac22a470b02b71efff950bbe80a8cfb571
+Destination TX: https://arbiscan.io/tx/0xa51dc11b1a804785fc2279a64e85929d30975cc19fad0f843a88eb6f07727bfb

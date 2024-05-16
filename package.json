@@ -1,0 +1,28 @@
+{
+  "name": "tsumori-debride-scripts",
+  "version": "1.0.0",
+  "description": "Tsumori DeBridge integration scripts",
+  "module": "index.ts",
+  "type": "module",
+  "author": "Tsumori",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "bun run index.ts",
+    "watch": "bun --watch run index.ts",
+    "test": "bun --watch test",
+    "debug": "bun --inspect=localhost:4000 index.ts",
+    "build": "bun build ./index.ts --compile --outfile cli",
+    "build:prod": "bun build --compile --minify --sourcemap ./index.ts --outfile cli"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.2",
+    "ethers": "^6.12.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
