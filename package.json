@@ -2,7 +2,6 @@
   "name": "tsumori-debride-scripts",
   "version": "1.0.0",
   "description": "Tsumori DeBridge integration scripts",
-  "module": "index.ts",
   "type": "module",
   "author": "Tsumori",
   "license": "MIT",
@@ -11,16 +10,18 @@
     "test": "test"
   },
   "scripts": {
-    "start": "bun run index.ts",
-    "watch": "bun --watch run index.ts",
+    "start": "bun run base-arbitrum.ts",
+    "watch": "bun --watch run base-arbitrum.ts",
     "test": "bun --watch test",
-    "debug": "bun --inspect=localhost:4000 index.ts",
-    "build": "bun build ./index.ts --compile --outfile cli",
-    "build:prod": "bun build --compile --minify --sourcemap ./index.ts --outfile cli"
+    "debug": "bun --inspect=localhost:4000 base-arbitrum.ts",
+    "build": "bun build ./base-arbitrum.ts --compile --outfile cli",
+    "build:prod": "bun build --compile --minify --sourcemap ./base-arbitrum.ts --outfile cli"
   },
   "devDependencies": {
+    "@solana/web3.js": "^1.91.8",
     "@types/bun": "^1.1.2",
-    "ethers": "^6.12.1"
+    "bs58": "^5.0.0",
+    "viem": "^2.10.8"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
