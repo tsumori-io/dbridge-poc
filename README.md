@@ -1,8 +1,12 @@
-# DBridge bridging example
+# DBridge DLN bridging POC
 
-In this POC we provide an example of bridging USDC from BASE to Arbitrum.
+In this POC a few scripts are provided to demonstrate bridging of USDC between BASE and Arbitrum/Solana chains using debridge [DLN](https://dln.trade/) API.
 
-We use the 
+## Scripts
+
+- [base-arbitrum.ts](base-arbitrum.ts): Bridge USDC from BASE to Arbitrum
+- [base-solana.ts](base-solana.ts): Bridge USDC from BASE to Solana
+- [solana-base.ts](solana-base.ts): Bridge USDC from Solana to BASE
 
 ### Pre-requisites
 
